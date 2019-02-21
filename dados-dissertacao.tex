@@ -1,0 +1,74 @@
+%%
+%
+% ARQUIVO: dados-dissertacao.tex
+%
+% VERSÃO: 1.0
+% DATA: Novembro de 2015
+% AUTOR: Coordenação PPgSC
+% 
+%  Arquivo tex com os dados acerca da Dissertação e da defesa.
+%
+%   nos campos que definem nomes (autor; orientador; co-orientador; membros da banca)
+%   É PRECISO usar os COMANDOS LaTeX para acentuação, conforme abaixo:
+%
+%         \'a - á || \`a - à || \~a - ã || \^a - â 
+%         \'e - é || \^e - ê || \'i - í 
+%         \'o - ó || \~o - õ || \^o - ô 
+%         \'u - ú || \"u - ü
+%
+%%
+
+%%% AUTOR DA DISSERTAÇÃO (Nome completo)
+\autor{Seu Nome Completo}
+
+%%% POSTO DO AUTOR DA DISSERTAÇÃO
+% ---
+%  se o autor é CIVIL, REMOVA ESTA LINHA
+%  se o autor é MILITAR, coloque CORRETAMENTE o POSTO aqui
+% ---
+%\postoautor{1 Ten}
+
+%%% TITULO DA DISSERTAÇÃO
+\titulo{Título Completo da Dissertação}
+
+%%% DATA DA DEFESA (formato {dd}{Mmmmm}{aaaa})
+\datadefesa{31}{Fevereiro}{2015}
+
+%%% ORIENTADOR DA DISSERTAÇÃO
+% ---
+%  CAMPO 1: P (para Prof.); PA (para Profa.); ou qualquer coisa (inclusive VAZIO) - o que for escrito aparecerá no documento
+%  CAMPO 2: Nome completo
+%  CAMPO 3: D (para D.Sc.); P (para Ph.D.); ou qualquer coisa (inclusive VAZIO) - o que for escrito aparecerá no documento
+%  CAMPO 4: Instituição (com "do / da")
+% ---
+\orientador{PA}{Nome Completo do Orientador}{D}{do IME}
+
+%%% CO-ORIENTADOR DA DISSERTAÇÃO
+% ---
+%  se não houver co-orientador, REMOVA ESTA LINHA
+%  preenchimento idêntico a \orientador{}{}{}{}
+% ---
+\coorientador{P}{Nome Completo do Co-orientador}{P}{do IME}
+
+%%% NÚMERO DA ENTRADA DA BIBLIOTECA (pegar na Biblioteca do IME)
+\biblioref{004.69}{S586e}
+
+%%% PALAVRAS-CHAVES DA DISSERTAÇÃO
+% ---
+%  devem ser separadas por vírgula e deve ter pelo menos uma
+% ---
+\palavraschaves{Palavra 01, Palavra 02, Palavra 03}
+
+%%% OUTROS MEMBROS DA BANCA DA DISSERTAÇÃO
+% ---
+%  aceita até mais 05 membros (de membrobancaI até membrobancaV)
+%    a. preemcher sucessivamente a partir de membrobancaI
+%    b. REMOVER as definições não necessárias
+%
+%  cada membro tem preenchimento idêntico a \orientador{}{}{}{}
+% ---
+\membrobancaI{}{Nome do Membro da Banca 1}{}{da PUC-Rio}
+\membrobancaII{P}{Nome do Membro da Banca 2}{P}{do Massachussets Institute of Technology}
+%\membrobancaIII{}{Nome do Membro da Banca 3}{}{da COPPE/UFRJ}
+%\membrobancaIV{}{Nome do Membro da Banca 4}{}{da UNIRIO}
+%\membrobancaV{}{Nome do Membro da Banca 5}{}{da UERJ}

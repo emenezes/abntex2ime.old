@@ -1,0 +1,141 @@
+%%
+%
+% ARQUIVO: main.tex
+%
+% VERSÃO: 1.1
+% DATA: Junho de 2016
+% AUTOR: Coordenação PPgSC
+% 
+%  Arquivo tex principal do documento de Dissertação.
+%  Este arquivo SÓ PRECISA SER MODIFICADO NA PARTE DE CONTEÚDO:
+%
+%    a. colocar um \include{•} para cada capítulo da Dissertação.
+%
+%%
+
+% -----
+% CLASSE DO DOCUMENTO DA DISSERTAÇÃO
+% -----
+\documentclass{dissertacao}
+
+% -----
+% PACOTES LATEX USADOS NO DOCUMENTO DA DISSERTAÇÃO
+% -----
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{color}
+\usepackage{amsfonts,amssymb}
+\usepackage[authoryear]{natbib}
+
+\usepackage{enumitem}
+\usepackage{rotating}
+\usepackage{lipsum}
+\usepackage{lastpage}
+\usepackage{stringstrings}
+\usepackage{pgffor}
+\usepackage{setspace}
+
+% -----
+% MARGENS DO DOCUMENTO DA DISSERTAÇÃO
+% -----
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={210mm,297mm},
+	left=25mm,
+	right=25mm,
+	top=25mm,
+	bottom=30mm,
+	textwidth=160mm,
+	textheight=242mm,
+	headheight=0mm,
+	headsep=0mm,
+}
+
+% -----
+% DECLARAÇÕES AUXILIARES PARA REFERÊNCIAS
+%
+%  Diferencia \citet e \citep de acordo com a NBR 10520:2002
+% -----
+\DeclareRobustCommand{\NATand}{;}
+\DeclareRobustCommand{\NATetal}{et~al.}
+\makeatletter
+\renewcommand{\NAT@nmfmt}[1]{%
+  \ifNAT@swa\expandafter\MakeUppercase
+  \else\DeclareRobustCommand{\NATand}{ e}\expandafter\@firstofone\fi{{\NAT@up #1}}%
+}
+\makeatother
+
+% -----
+% AMBIENTE DE FIGURAS DA DISSERTAÇÃO
+%
+%  A classe do documento está configurada SOMENTE para figuras no formato EPS.
+%  Logo, use PREFERENCIALMENTE este tipo de arquivo.
+%
+%    a. os arquivos das figuras devem estar no diretório 'img'
+% -----
+\graphicspath{{./img/}}
+
+% -----
+% INÍCIO DO DOCUMENTO DA DISSERTAÇÃO
+% -----
+\begin{document}
+
+% -----
+% PARTE PRÉ-TEXTUAL DA DISSERTAÇÃO
+%
+% Alterar o CONTEÚDO dos arquivos siglas.tex E pre-texto.tex
+% -----
+\include{dados-dissertacao}
+\include{pre-texto}
+
+\parindent 0.75cm
+
+% -----
+% PARTE DE CONTEÚDO DA DISSERTAÇÃO
+%
+%  Escrever cada capitulo da Dissertação em um arquivo .tex separado.
+%  Adicionar os arquivos .tex à Dissertação com comando \include{•}
+% -----
+\include{cap-01}
+
+% -----
+% PARTE DE REFERÊCIAS BIBLIOGRÁFICAS DA DISSERTAÇÃO
+%
+%  As referências da Dissertação devem estar no arquivo refs.bib
+%  Devem seguir o formato bibtex - ver Manual-Referencias.pdf para mais detalhes.
+% -----
+\bibliographystyle{dissertacao}
+\bibliography{refs}
+
+% -----
+% PARTE DE APÊNDICE DA DISSERTAÇÃO
+%
+%  Se a Dissertação não tiver apêndices REMOVER AS LINHAS ABAIXO
+%  Adicionar os arquivos .tex de apêndice à Dissertação com comando \include{•}
+% -----
+\inappendix
+\include{apendice}
+\outappendix
+
+% -----
+% PARTE DE ANEXO DA DISSERTAÇÃO
+%
+%  Se a Dissertação não tiver anexos REMOVER AS LINHAS ABAIXO
+%  Adicionar os arquivos .tex de anexo à Dissertação com comando \include{•}
+% -----
+\inannex
+\include{anexo}
+\outannex
+
+% -----
+% FIM DO DOCUMENTO DA DISSERTAÇÃO
+% -----
+\label{theend}
+\end{document}
