@@ -256,47 +256,42 @@
 % Inserir folha de aprovação
 % ---
 
-% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
-% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
-% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
-% imagem da página assinada pela banca com o comando abaixo:
-%
 % \begin{folhadeaprovacao}
 % \includepdf{folhadeaprovacao_final.pdf}
 % \end{folhadeaprovacao}
 %
 \begin{folhadeaprovacao}
-
   \begin{center}
-    {\ABNTEXchapterfont\large\imprimirautor}
-
-    \vspace*{\fill}\vspace*{\fill}
-    \begin{center}
-      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
-    \end{center}
+    {\ABNTEXchapterfont\bfseries\large\MakeUppercase\imprimirautor}
+    \par
     \vspace*{\fill}
-    
-    \hspace{.45\textwidth}
-    \begin{minipage}{.5\textwidth}
-        \imprimirpreambulo
+    {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo\par}
+    \vspace*{\fill}
+    \begin{minipage}{\textwidth}
+        \imprimirpreambulo \par
+        \smallskip
+        {\imprimirorientadorRotulo~\imprimirorientador\par}
+        {\imprimircoorientadorRotulo~\imprimircoorientador}%
     \end{minipage}%
     \vspace*{\fill}
-   \end{center}
-        
-   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
-
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Professor} \\ Convidado 1}
-   \assinatura{\textbf{Professor} \\ Convidado 2}
-   %\assinatura{\textbf{Professor} \\ Convidado 3}
-   %\assinatura{\textbf{Professor} \\ Convidado 4}
+ \end{center}
+      \begin{flushleft}
+      Aprovado em \imprimirlocal, 22 de março de \imprimirdata, pela seguinte banca examinadora:
+      \end{flushleft}
+    \setlength{\ABNTEXsignwidth}{.9\textwidth}
+   \assinatura{Prof. \textbf{\imprimirorientador} - Ph.D do IME - Presidente}
+   \assinatura{Prof. \textbf{\imprimircoorientador} - Ph.D do LNCC}
+   \assinatura{Prof. \textbf{Convidado 1} - Ph.D do IMPA}
+   \assinatura{Prof. \textbf{Convidado 2} - Ph.D do LNCC}
+  \assinatura{Prof. \textbf{Convidado 3} - D.Sc da PUC}
+   \assinatura{Prof. \textbf{Convidado 4} - D.Sc da UFT}
+   \assinatura{Prof. \textbf{Convidado 5} - Docteur ENSAE do IME}
       
    \begin{center}
     \vspace*{0.5cm}
     {\large\imprimirlocal}
     \par
     {\large\imprimirdata}
-    \vspace*{1cm}
   \end{center}
   
 \end{folhadeaprovacao}
