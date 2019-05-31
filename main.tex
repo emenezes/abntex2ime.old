@@ -425,21 +425,14 @@ contribuirão para a evolução do \abnTeX.
 \cleardoublepage
 % ---
 
-
-
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
 \textual
 
 \include{intro_abntex}
-
-
-% ---
-% Capitulo com exemplos de comandos inseridos de arquivo externo 
-% ---
 \include{abntex2-modelo-include-comandos}
-% ---
+
 
 \chapter{Conteúdos específicos do modelo de trabalho acadêmico}\label{cap_trabalho_academico}
 
@@ -480,8 +473,6 @@ Segunda opção, utilizando  \texttt{ref}: Ver o Quadro \ref{quadro_exemplo}.
 
 \lipsum[2-3]
 
-
-
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
 % para que se inicie o bookmark na raiz
@@ -517,20 +508,7 @@ Segunda opção, utilizando  \texttt{ref}: Ver o Quadro \ref{quadro_exemplo}.
 % ---
 \begin{apendicesenv}
 
-% Imprime uma página indicando o início dos apêndices
-% \partapendices
-
-% ----------------------------------------------------------
-\chapter{Quisque libero justo}
-% ----------------------------------------------------------
-
-\lipsum[50]
-
-% ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
+\include{apendice}
 
 \end{apendicesenv}
 % ---
