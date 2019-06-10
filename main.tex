@@ -38,7 +38,7 @@
 % ---
 % Pacotes de citações
 % ---
-% \usepackage[brazilian,hyperpageref]{backref} % Paginas com as citações na bibl
+\usepackage[brazilian,hyperpageref]{backref} % Paginas com as citações na bibl
 \usepackage[num]{./abntex2cite}	% Citações padrão ABNT
 \citebrackets[]
 
@@ -89,27 +89,27 @@
 % ---
 % Configurações de aparência do PDF final
 
-% alterando o aspecto da cor azul
-\definecolor{blue}{RGB}{41,5,195}
+% % alterando o aspecto da cor azul
+% \definecolor{blue}{RGB}{41,5,195}
 
-% informações do PDF
-\makeatletter
-\hypersetup{
-     	%pagebackref=true,
-		pdftitle={\@title}, 
-		pdfauthor={\@author},
-    	pdfsubject={\imprimirpreambulo},
-	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
-		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=blue,          	% color of internal links
-    	citecolor=blue,        		% color of links to bibliography
-    	filecolor=magenta,      		% color of file links
-		urlcolor=blue,
-		bookmarksdepth=4
-}
-\makeatother
-% --- 
+% % informações do PDF
+% \makeatletter
+% \hypersetup{
+%  	%pagebackref=true,
+% 	pdftitle={\@title}, 
+% 	pdfauthor={\@author},
+% 	pdfsubject={\imprimirpreambulo},
+%     pdfcreator={LaTeX with abnTeX2},
+% 	pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+% 	colorlinks=true, % false: boxed links; true: colored links
+% 	linkcolor=blue, % color of internal links
+% 	citecolor=blue,	% color of links to bibliography
+% 	filecolor=magenta, % color of file links
+% 	urlcolor=blue,
+% 	bookmarksdepth=4
+% }
+% \makeatother
+% % --- 
 
 % ---
 % Posiciona figuras e tabelas no topo da página quando adicionadas sozinhas
